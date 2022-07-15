@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Albums</h1>
+
+<%= render "form", album: Album.new %>
+
+<div id="albums">
+  <% @albums.each do |album| %>
+    <%= render album %>
+    <p>
+      <%= link_to "Show this album", album %>
+    </p>
+  <% end %>
+</div>

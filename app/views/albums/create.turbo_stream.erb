@@ -1,6 +1,7 @@
 <%= turbo_stream.prepend "albums" do %>
   <%= render "album", album: @album %>
 <% end %>
+
 <%= turbo_stream.replace "#{dom_id(Album.new)}_form" do %>
   <%= render "form", album: Album.new %>
 <% end %>

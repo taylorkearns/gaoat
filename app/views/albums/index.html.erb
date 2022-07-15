@@ -6,9 +6,6 @@
 
 <div id="albums">
   <% @albums.each do |album| %>
-    <%= render album %>
-    <p>
-      <%= link_to "Show this album", album %>
-    </p>
+    <%= render "album", album: album %>
   <% end %>
 </div>

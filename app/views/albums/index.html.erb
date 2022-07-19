@@ -1,11 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
-<div id="albums">
-  <h1>Albums</h1>
+<div class="main">
+  <h1>Greatest Albums: All Time</h1>
 
-  <%= render "form", album: Album.new %>
+  <%= render "new_album_form", album: Album.new %>
 
-  <% @albums.each do |album| %>
-    <%= render "album", album: album %>
-  <% end %>
+  <div id="albums">
+    <% @albums.each do |album| %>
+      <%= render "album", album: album %>
+    <% end %>
+  </div>
 </div>

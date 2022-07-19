@@ -1,5 +1,46 @@
 @import "fonts";
+@import "colors";
 
 * {
   font-family: $body_font;
+  &:focus {
+    outline: none;
+  }
+}
+
+body {
+  background-color: $charcoal;
+  color: $chalk;
+}
+
+a {
+  color: $chalk;
+}
+
+input {
+  font-size: 20px;
+}
+
+input[type="text"] {
+  border: 1px solid $bright-sky;
+  padding: 5px;
+  background: $charcoal;
+  color: $gold;
+}
+
+input[type="submit"] {
+  border: 1px solid $bright-sky;
+  color: $bright-sky;
+  font-family: $body_font;
+  background: $charcoal;
+  margin: 5px;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 3px lighten($color: $bright-sky, $amount: 20);
+  }
+}
+
+.main {
+  margin: 30px;
 }

@@ -3,5 +3,5 @@
 <% end %>
 
 <%= turbo_stream.replace "#{dom_id(Album.new)}_form" do %>
-  <%= render "form", album: Album.new %>
+  <%= render "new_album_form", album: Album.new %>
 <% end %>

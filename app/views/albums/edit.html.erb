@@ -1,6 +1,8 @@
 <h1>Editing album</h1>
 
-<%= render "form", album: @album %>
+<%= turbo_frame_tag dom_id(@album) do %>
+  <%= render "form", album: @album %>
+<% end %>
 
 <br>
 

@@ -29,6 +29,12 @@ class AlbumsController < ApplicationController
         format.turbo_stream
         format.html { redirect_to album_url(@album), notice: "Album was successfully created." }
       else
+        format.turbo_stream do
+           render turbo_stream: turbo_stream.replace("#{helpers.dom_id(@album)}_form",
+                  partial: "form",
+                  locals: { album: @album })
+        end
+
         format.html { render :new, status: :unprocessable_entity }
       end
     end
